@@ -1,0 +1,79 @@
+<!doctype html>
+<html ng-app="basic">
+<head>
+	<title>League-ish</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular-route.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> -->
+	<!-- // <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+	<script src="/js/basic.js"></script>
+	<script src="/js/basicControllers.js"></script>
+	<link href="/css/style.css" rel="stylesheet" />
+</head>
+<body ng-app="basic">
+<div class="page-wrap">
+	<div class="container-fluid" id="main">
+		<div class="row">
+			<div class="col-md-3 left col s3">
+				<a href="/">
+					<button class="btn btn-default button-separator card" type="button">
+						HOME
+					</button>
+				</a>
+				<hr>
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Summoner ID..." ng-model="summoner">
+					<span class="input-group-btn">
+						<a ng-href="#/matchHistory/{{summoner}}">
+						<button class="btn btn-default button-separator" type="button">
+							SEARCH
+						</button>
+						</a>
+					</span>
+				</div>
+				<a href="#/matchHistory/timbobamoute">
+					<button class="btn btn-default button-separator" type="button">
+						TIMBOBAMOUTE
+					</button>
+				</a>
+				<a href="#/matchHistory/crispybabieslol">
+					<button class="btn btn-default button-separator" type="button">
+						CRISPYBABIESLOL
+					</button>
+				</a>
+				<a href="#/matchHistory/biffwidefelo">
+					<button class="btn btn-default button-separator" type="button">
+						BIFFWIDEFELO
+					</button>
+				</a>
+				<a href="#/matchHistory/xxxcharizardxxx">
+					<button class="btn btn-default button-separator" type="button">
+						XXXCHARIZARDXXX
+					</button>
+				</a>
+			</div>
+				<div class="col-md-9 right col s9" ng-controller="BasicInit" >
+					<div class="col-md-8 col-md-offset-2 search">
+						
+					</div>
+				<div ui-view></div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer id="site-footer">
+	<p class="copyright">&#169; Dan Federico</p>
+</footer>
+</body>
+</html>

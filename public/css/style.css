@@ -1,0 +1,108 @@
+html, body {
+	height:100%;
+}
+.page-wrap {
+	min-height:100%;
+	/*margin-bottom:-62px;*/
+}
+.page-wrap:after {
+/*  content: "";
+  display: block;*/
+}
+#site-footer {
+	height:42px;
+	/*background-color:orange;*/
+	background-color:#26a69a;
+}
+.copyright {
+	color:white;
+	padding-left:20px;
+	padding-top:10px;
+}
+.input-group {
+	margin-bottom:20px;
+}
+.button-separator {
+	width:100%;
+	margin-bottom:20px;
+}
+.left {
+	height:100%;
+	/*min-height:150px;*/
+	/*background-image:url(squared_metal.png);*/
+}
+.right {
+	height:100%;
+	/*background-color:gray;*/
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:20px;
+	/*background-image:url(tree_bark.png);*/
+}
+.loading-icon {
+	color:#26a69a;
+	font-size:146px;
+	margin-left:30%;
+	margin-top:15%;
+}
+.ico {
+	font-size:27px;
+	position:relative;
+	top:-3px;
+	color:black;
+}
+.win-true {
+	/*background-color:green;*/
+	background-color:#66bb6a;
+}
+.win-false {
+	/*background-color:red;*/
+	background-color:#ef5350;
+}
+.search-button {
+	color:black;
+}
+.right div {
+	/*border-left:1px dashed gray;*/
+	/*text-align:center;*/
+
+	/*background-color:white;*/
+}
+.card-content div {
+	vertical-align:top;
+	text-align:center;
+}
+.card .card-content {
+	padding-bottom:40px;
+}
+.results {
+	margin-top:20px;
+}
+.results div {
+	border-left:1px dashed gray;
+	padding-left:0;
+	padding-right:0;
+	background-color:white;
+}
+.results div:first-child{
+	border-left:none;
+}
+.search {
+	padding-left:0;
+	padding-right:0;
+}
+.new-row {
+	text-align:left;
+	/*border:1px solid gray;*/
+	padding-top:5px;
+	padding-bottom:5px;
+	font-family:Arial;
+	/*clear:both;*/
+}
+/*.card-title {
+	height:30px;
+}*/
+/*.card-content {
+	margin-top:0;
+	margin-bottom:0;
+}*/
