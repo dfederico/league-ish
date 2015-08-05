@@ -108,12 +108,15 @@ basicControllers.controller('BasicCtrl3', function($scope, $http, $stateParams) 
 		}
 	}
 	$scope.itemed = function(itemId) {
-		var tempItemObject = _.where(itemListObj, {id:itemId});
-		return tempItemObject[0].name;
+		//console.log('enetered itemed');
+		//console.log(itemListObj);
+		if(itemId != 0) {
+			var tempItemObject = _.where(itemListObj, {id: itemId});
+			//return tempItemObject[0].name;
+			return tempItemObject[0].name;
+		}
+		else {
+			return "N/A";
+		}
 	}
 });
-
-
-
-
-
