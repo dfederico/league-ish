@@ -1,3 +1,16 @@
-<div class="" ng-controller="BasicCtrl3">
-	<div>this will be the combat section</div>
-</div>
+<!--<div class="" ng-controller="BasicCtrl3">-->
+	<!--<div>this will be the combat section</div>-->
+<!--</div>-->
+<div>Items:</div>
+<table>
+	<tr>
+		<td>{{itemed(match.participants[0].stats.item0)}}</td>
+		<td>{{match.participants[0].stats.item1}}</td>
+		<td>{{match.participants[0].stats.item2}}</td>
+	</tr>
+	<tr>
+		<td>{{match.participants[0].stats.item3}}</td>
+		<td>{{match.participants[0].stats.item4}}</td>
+		<td>{{match.participants[0].stats.item5}}</td>
+	</tr>
+</table>

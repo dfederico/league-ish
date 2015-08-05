@@ -1,6 +1,8 @@
 var basicControllers = angular.module('basicControllers', []);
 var globalMatchHistory;
 var champListObj;
+var itemListObj;
+var summonerSpellObj;
 
 basicControllers.controller('BasicInit', function($scope, $http) {
 	$scope.init = function() {
@@ -13,6 +15,22 @@ basicControllers.controller('BasicInit', function($scope, $http) {
 			}).
 			error(function (data, status, headers, config) {
 				console.log('champ data failed');
+			});
+		$http.get('/itemlist').
+			success(function (data, status, headers, config) {
+				console.log(status + ' is the itemlist results');
+				itemListObj = data.data;
+			}).
+			error(function (data, status, headers, config) {
+				console.log('item data failed');
+			});
+		$http.get('/summonerSpellList').
+			success(function (data, status, headers, config) {
+				console.log(status + ' is the summonerSpelllist results');
+				summonerSpellObj = data.data;
+			}).
+			error(function (data, status, headers, config) {
+				console.log('summoner spell data failed');
 			});
 	}
 });
@@ -86,8 +104,12 @@ basicControllers.controller('BasicCtrl3', function($scope, $http, $stateParams) 
 		if(globalMatchHistory.matches[i].matchId == mid) {
 			match = globalMatchHistory.matches[i];
 			$scope.match = match;
-			console.log(match);
+			//console.log(match);
 		}
+	}
+	$scope.itemed = function(itemId) {
+		var tempItemObject = _.where(itemListObj, {id:itemId});
+		return tempItemObject[0].name;
 	}
 });
 

@@ -63,7 +63,7 @@ app.get('/summoner', function (req, res) {
 
 app.get('/champlist', function (req, res) {
   // var champid = req.params.id;
-  champuri = 'https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?champData=image&api_key=33ddb3c0-b554-4c7e-a274-fbf483eb2afb';
+  var champuri = 'https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?champData=image&api_key=33ddb3c0-b554-4c7e-a274-fbf483eb2afb';
   request(champuri, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       res.send(body);
@@ -73,6 +73,33 @@ app.get('/champlist', function (req, res) {
     }
   });
 });
+
+
+app.get('/itemlist', function (req, res) {
+  var itemuri = 'https://global.api.pvp.net/api/lol/static-data/na/v1.2/item?itemListData=image&api_key=33ddb3c0-b554-4c7e-a274-fbf483eb2afb';
+  request(itemuri, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      res.send(body);
+    }
+    else {
+      res.send(response.statusCode);
+    }
+  });
+});
+
+app.get('/summonerSpelllist', function (req, res) {
+  var summonerspelluri = 'https://global.api.pvp.net/api/lol/static-data/na/v1.2/summoner-spell?spellData=image&api_key=33ddb3c0-b554-4c7e-a274-fbf483eb2afb';
+  request(summonerspelluri, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      res.send(body);
+    }
+    else {
+      res.send(response.statusCode);
+    }
+  });
+});
+
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
