@@ -10,6 +10,11 @@ basic.config(['$stateProvider','$urlRouterProvider',
           	$scope.summoner = $stateParams.summoner;
           }
         })
+	    .state('home', {
+			url: '',
+			templateUrl: 'partials/home.html',
+			controller:'BasicCtrl4'
+		})
         .state('match', {
 			url:'/match/:matchId',
 			templateUrl:'/partials/match.html',

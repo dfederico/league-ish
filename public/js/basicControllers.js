@@ -120,3 +120,6 @@ basicControllers.controller('BasicCtrl3', function($scope, $http, $stateParams) 
 		}
 	}
 });
+basicControllers.controller('BasicCtrl4', function($scope) {
+
+});
