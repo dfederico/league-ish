@@ -1,6 +1,7 @@
 <!doctype html>
 <html ng-app="basic">
 <head>
+	<base href="/">
 	<title>League-ish</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
@@ -35,29 +36,29 @@
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Summoner ID..." ng-model="summoner">
 					<span class="input-group-btn">
-						<a ng-href="#/matchHistory/{{summoner}}">
+						<a ng-href="/matchHistory/{{summoner}}">
 						<button class="btn btn-default button-separator" type="button">
 							SEARCH
 						</button>
 						</a>
 					</span>
 				</div>
-				<a href="#/matchHistory/timbobamoute">
+				<a href="/matchHistory/timbobamoute">
 					<button class="btn btn-default button-separator" type="button">
 						TIMBOBAMOUTE
 					</button>
 				</a>
-				<a href="#/matchHistory/crispybabieslol">
+				<a href="/matchHistory/crispybabieslol">
 					<button class="btn btn-default button-separator" type="button">
 						CRISPYBABIESLOL
 					</button>
 				</a>
-				<a href="#/matchHistory/biffwidefelo">
+				<a href="/matchHistory/biffwidefelo">
 					<button class="btn btn-default button-separator" type="button">
 						BIFFWIDEFELO
 					</button>
 				</a>
-				<a href="#/matchHistory/xxxcharizardxxx">
+				<a href="/matchHistory/xxxcharizardxxx">
 					<button class="btn btn-default button-separator" type="button">
 						XXXCHARIZARDXXX
 					</button>

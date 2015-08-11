@@ -1,6 +1,6 @@
 var basic = angular.module('basic', ['ui.router', 'basicControllers']);
-basic.config(['$stateProvider','$urlRouterProvider',
-    function($stateProvider, $urlRouterProvider) {
+basic.config(['$stateProvider','$urlRouterProvider', '$locationProvider',
+    function($stateProvider, $urlRouterProvider, $locationProvider) {
       $urlRouterProvider.otherwise('/');
       $stateProvider
         .state('matchHistory', {
@@ -11,7 +11,7 @@ basic.config(['$stateProvider','$urlRouterProvider',
           }
         })
 	    .state('home', {
-			url: '',
+			url: '/',
 			templateUrl: 'partials/home.html',
 			controller:'BasicCtrl2'
 		})
@@ -37,5 +37,7 @@ basic.config(['$stateProvider','$urlRouterProvider',
 			templateUrl:'/partials/wards.html',
 			controller:'BasicCtrl3'
 		});
+		// use the HTML5 History API
+		$locationProvider.html5Mode(true);
 	 }
 ]);
