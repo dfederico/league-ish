@@ -13,7 +13,7 @@ basic.config(['$stateProvider','$urlRouterProvider',
 	    .state('home', {
 			url: '',
 			templateUrl: 'partials/home.html',
-			controller:'BasicCtrl4'
+			controller:'BasicCtrl2'
 		})
         .state('match', {
 			url:'/match/:matchId',

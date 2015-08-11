@@ -98,28 +98,21 @@ basicControllers.controller('BasicCtrl2', function($scope, $http) {
 });
 basicControllers.controller('BasicCtrl3', function($scope, $http, $stateParams) {
 	$scope.matchId = $stateParams.matchId;
-	var mid = $stateParams.matchId
+	var mid = $stateParams.matchId;
 	var match;
 	for (var i = 0; i < globalMatchHistory.matches.length; i++) {
 		if(globalMatchHistory.matches[i].matchId == mid) {
 			match = globalMatchHistory.matches[i];
 			$scope.match = match;
-			//console.log(match);
 		}
 	}
 	$scope.itemed = function(itemId) {
-		//console.log('enetered itemed');
-		//console.log(itemListObj);
 		if(itemId != 0) {
 			var tempItemObject = _.where(itemListObj, {id: itemId});
-			//return tempItemObject[0].name;
 			return tempItemObject[0].name;
 		}
 		else {
 			return "N/A";
 		}
 	}
-});
-basicControllers.controller('BasicCtrl4', function($scope) {
-
 });
